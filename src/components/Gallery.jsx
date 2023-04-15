@@ -1,10 +1,11 @@
-import { useEffect } from "react";
 import { gql, useQuery } from "@apollo/client";
 import Card from "./Card";
+import Loading from "./Loading";
+import styles from "../styles/Gallery.module.css";
 
 export const Gallery = () => {
-  const pageItems = 20;
-  const QUERY = gql`
+  const pageItems = 100;
+  const Pokemon_Query = gql`
     query pokemons($first: Int = ${pageItems}) {
       pokemons(first: $first) {
         id
@@ -29,16 +30,19 @@ export const Gallery = () => {
       }
     }
   `;
-  const { loading, error, data } = useQuery(QUERY);
-  if (loading) return <div className="loading">Loading...</div>;
+  const { loading, error, data } = useQuery(Pokemon_Query);
+  if (loading) return <Loading />;
   if (error) return <div className="error">Opps an Error Occured</div>;
   console.log(data);
   return (
-    <div className="gallery container">
-      <h2>Pokemon Gallery</h2>
-      {data.pokemons.map((e) => {
-        return <Card data={e} key={e.id} />;
-      })}
+    <div className={styles.container}>
+      {/* <Loading /> */}
+      <h2 className={styles.heading}>Pokemon Gallery</h2>
+      <ul className={styles.list}>
+        {data.pokemons.map((e) => {
+          return <Card data={e} key={e.id} />;
+        })}
+      </ul>
     </div>
   );
 };

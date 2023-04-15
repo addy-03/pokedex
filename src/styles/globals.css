@@ -1,14 +1,23 @@
 :root {
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --font-brand: "Rammetto One", cursive, display;
+  --font-mono: "Nova Mono", monospace;
+  --font-regular: "Dongle", sans-serif;
+  --font-roboto: "Orbitron", sans-serif;
 
+  --color-magenta: #de1537;
+  --color-magenta-dark: #8f0c25;
+  --color-blue: #27a4f3;
+  --color-white: #dedede;
+  --color-green: #4ca459;
+  --color-dark: #dddddd;
 }
 
 /* @media (prefers-color-scheme: dark) {
 } */
 
 * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -17,7 +26,16 @@
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
+  height: 100vh;
+  overflow: hidden;
+  font-family: var(--font-roboto);
+  scroll-behavior: smooth;
+}
+
+#__next {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
 }
 
 a {

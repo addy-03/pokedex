@@ -1,0 +1,140 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  min-width: 20%;
+  max-width: 300px;
+  aspect-ratio: 5 / 6;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background-color: #272424;
+  color: var(--color-white);
+  box-shadow: rgba(73, 73, 73, 0.454) 1px 1px 10px 3px;
+  transition: all 0.2s ease-in-out;
+}
+
+.card:hover {
+  scale: 1.02;
+  box-shadow: rgba(120, 64, 58, 0.25) 1px 1px 5px 3px,
+    rgba(91, 37, 37, 0.3) 1px 1px 5px 3px;
+  cursor: pointer;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 10px;
+  gap: 5px;
+}
+
+.image {
+  width: 100%;
+  height: 70%;
+  object-fit: contain;
+  padding: 5px;
+  background-color: white;
+  filter: saturate(1.8) contrast(1.1);
+}
+
+.number {
+  font-size: 18px;
+  font-weight: 100;
+  /* color: rgb(72, 70, 70); */
+  color: var(--color-magenta);
+  margin-bottom: auto;
+}
+.name {
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.details ul {
+  display: flex;
+  gap: 5px;
+}
+
+.type {
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: rgba(48, 48, 48, 0.438) 1px 1px 8px 1px;
+}
+
+.bg_color_bug {
+  background-color: #3e6c09;
+  color: #fff;
+}
+.bg_color_dark {
+  background-color: #707070;
+  color: #fff;
+}
+.bg_color_dragon {
+  background: linear-gradient(180deg, #27a4f3 50%, #d65e49 50%);
+  background-color: #27a4f3;
+  color: #fff;
+}
+.bg_color_electric {
+  background-color: #f7df41;
+  color: #212121;
+}
+.bg_color_fairy {
+  background-color: #ecabd9;
+  color: #212121;
+}
+.bg_color_fighting {
+  background-color: #ad4f14;
+  color: #fff;
+}
+.bg_color_fire {
+  background-color: #ec7b2a;
+  color: #fff;
+}
+.bg_color_flying {
+  background: linear-gradient(180deg, #27a4f3 50%, #bdb9b8 50%);
+  background-color: #27a4f3;
+  color: #212121;
+}
+.bg_color_ghost {
+  background-color: #6d40b4;
+  color: #fff;
+}
+.bg_color_grass {
+  background-color: #a5e24a;
+  color: #212121;
+}
+.bg_color_ground {
+  background: linear-gradient(180deg, #d7c237 50%, #76682c 50%);
+  background-color: #d7c237;
+  color: #fff;
+}
+.bg_color_ice {
+  background-color: #7ad6f1;
+  color: #212121;
+}
+.bg_color_normal {
+  background-color: #98999a;
+  color: #212121;
+}
+.bg_color_poison {
+  background-color: #ab78b9;
+  color: #fff;
+}
+.bg_color_psychic {
+  background-color: #9d4e7c;
+  color: #fff;
+}
+.bg_color_rock {
+  background-color: #5d5118;
+  color: #fff;
+}
+.bg_color_steel {
+  background-color: #4682b4;
+  color: #fff;
+}
+.bg_color_water {
+  background-color: #27a4f3;
+  color: #fff;
+}
